@@ -1,5 +1,6 @@
 *.suo
-Debug/
+dbtail/bin/Debug/
+dbtail/bin/Release/*
 *.pdb
 obj/
 packages/*

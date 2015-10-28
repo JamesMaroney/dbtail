@@ -1,0 +1,5 @@
+*.suo
+Debug/
+*.pdb
+obj/
+packages/*

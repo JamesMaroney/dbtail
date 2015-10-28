@@ -52,8 +52,10 @@ namespace dbtail
         return;
       }
 
+      bool ThrewException = false;
       do
       {
+        ThrewException = false;
         try
         {
           using (SqlConnection conn = new SqlConnection())
@@ -95,8 +97,10 @@ namespace dbtail
         catch (Exception e)
         {
           Console.Error.WriteLine(e.Message);
+          ThrewException = true;
         }
-      } while (Retry);
+        if (Retry && ThrewException) Thread.Sleep(TimeSpan.FromMilliseconds(SleepInterval));
+      } while (Retry && ThrewException);
     }
   }
 }

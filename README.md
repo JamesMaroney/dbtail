@@ -7,7 +7,7 @@ You can download the latest built exe from the repo in `dbtail/bin/Relase/dbtail
 ## Usage
 
     Usage: dbtail -frh -S <String> -d <String> -c <String> -t <String> -q <String> -F <String> -s <Integer>
-        Options:
+    Options:
         -S --server <String>           : Database Server [localhost]
         -d --database <String>         : Database Name
         -c --connectionstring <String> : Connection String (Overrides --server and --database)
